@@ -1,9 +1,10 @@
 # SOAL
 Buatlah sebuah aplikasi peminjaman buku untuk perpustakaan dengan kriteria
 1. login / register
-2. pembuatan buku baru
-3. peminjaman buku
-4. daftar buku yang dipinjam
+2. pembuatan / penghapusan / perubahan kategori buku
+3. pembuatan / penghapusan / perubahan buku
+4. peminjaman buku
+5. daftar buku yang dipinjam
 
 untuk dokumentasi api:
 ```
