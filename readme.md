@@ -1,4 +1,4 @@
-# SOAL
+# SOAL FRONTEND
 Buatlah sebuah aplikasi peminjaman buku untuk perpustakaan dengan kriteria
 1. login / register
 2. pembuatan / penghapusan / perubahan kategori buku
