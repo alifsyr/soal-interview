@@ -1,5 +1,10 @@
 <?php
 
+use App\Http\Controllers\BookController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\LoanController;
+
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,6 +19,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// book routes
+Route::get("book", [BookController::class,"index"]);
+Route::get("book/{id}", [BookController::class,"show"]);
+Route::post("book", [BookController::class,"store"]);
+Route::put("book/{id}", [BookController::class,"update"]);
+Route::delete("book/{id}", [BookController::class,"destroy"]);
+
+// category routes
+Route::get("categories", [CategoryController::class,"index"]);
+Route::get("categories/{id}", [CategoryController::class,"show"]);
+Route::post("categories", [CategoryController::class,"store"]);
+Route::put("categories/{id}", [CategoryController::class,"update"]);
+Route::delete("categories/{id}", [CategoryController::class,"destroy"]);
+
+// loan routes
+Route::get("loan/{id}", [LoanController::class,"userLoans"]);
+Route::post("loan/borrow", [LoanController::class,"borrow"]);
+Route::post("loan/return", [LoanController::class,"return"]);
